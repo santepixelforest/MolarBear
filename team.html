@@ -1,0 +1,547 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Meet Our Team — MolarBear</title>
+<meta name="description" content="Meet the people behind MolarBear and our mission to make dental care more human.">
+
+<style>
+:root {
+  --ink: #202021;
+  --paper: #fafaf7;
+  --purple: #6349e8;
+  --lime: #e4f79a;
+  --muted: #66666c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+
+.wrap {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 56px;
+}
+
+/* Navigation */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 27px 0;
+  border-bottom: 1px solid #d9d9d5;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  text-decoration: none;
+}
+
+.brand i {
+  color: var(--purple);
+  font-style: normal;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 14px;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:last-child {
+  border: 1px solid #b9b9bc;
+  border-radius: 30px;
+  padding: 9px 18px;
+}
+
+/* Hero */
+
+.hero {
+  padding: 85px 0 65px;
+  max-width: 950px;
+}
+
+.eyebrow {
+  color: var(--purple);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -3.5px;
+  margin: 0 0 25px;
+}
+
+h1 span {
+  color: var(--purple);
+}
+
+.intro {
+  max-width: 690px;
+  font-size: 20px;
+  color: #55555b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Philosophy */
+
+.philosophy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  padding: 55px 0 75px;
+  border-top: 1px solid #d2d2d0;
+}
+
+.philosophy h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+  margin: 0;
+}
+
+.philosophy p {
+  color: var(--muted);
+  font-size: 18px;
+  margin: 0 0 18px;
+}
+
+/* Team */
+
+.team-section {
+  padding: 65px 0 85px;
+  border-top: 1px solid #d2d2d0;
+}
+
+.section-heading {
+  max-width: 650px;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  font-size: clamp(34px, 4vw, 49px);
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+  margin: 0 0 15px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 18px;
+  margin: 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px 25px;
+}
+
+.member {
+  min-width: 0;
+}
+
+.member-photo {
+  width: 100%;
+  aspect-ratio: 4 / 4.5;
+  background: #e9e5fa;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.member-photo span {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--purple);
+  opacity: 0.65;
+  letter-spacing: -3px;
+}
+
+.member h3 {
+  font-size: 23px;
+  letter-spacing: -0.6px;
+  margin: 0 0 4px;
+}
+
+.member .role {
+  font-size: 13px;
+  color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.member .bio {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Closing section */
+
+.closing {
+  background: #222225;
+  color: white;
+  border-radius: 18px;
+  padding: 55px;
+  margin: 10px 0 65px;
+}
+
+.closing .eyebrow {
+  color: var(--lime);
+}
+
+.closing h2 {
+  max-width: 750px;
+  font-size: clamp(32px, 4vw, 49px);
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+  margin: 15px 0 20px;
+}
+
+.closing p {
+  max-width: 650px;
+  color: #ceced5;
+  font-size: 17px;
+  margin: 0 0 25px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  background: var(--lime);
+  color: #222625;
+  border-radius: 30px;
+  padding: 12px 21px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+  border-top: 1px solid #d2d2d0;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 25px 0 35px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+footer .brand {
+  font-size: 22px;
+  color: var(--ink);
+}
+
+/* Responsive */
+
+@media(max-width: 900px) {
+  .wrap {
+    padding: 0 28px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .philosophy {
+    gap: 30px;
+  }
+}
+
+@media(max-width: 680px) {
+  .wrap {
+    padding: 0 22px;
+  }
+
+  header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+
+  .brand {
+    font-size: 25px;
+  }
+
+  .nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 55px 0 45px;
+  }
+
+  h1 {
+    font-size: 46px;
+    letter-spacing: -2px;
+  }
+
+  .intro {
+    font-size: 17px;
+  }
+
+  .philosophy {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 40px 0;
+  }
+
+  .team-section {
+    padding: 45px 0;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
+  }
+
+  .member-photo {
+    border-radius: 10px;
+    margin-bottom: 13px;
+  }
+
+  .member-photo span {
+    font-size: 42px;
+  }
+
+  .member h3 {
+    font-size: 18px;
+  }
+
+  .member .role {
+    font-size: 11px;
+  }
+
+  .member .bio {
+    font-size: 13px;
+  }
+
+  .closing {
+    padding: 30px;
+    margin-bottom: 35px;
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header>
+  <a href="/" class="brand">molarbear<i>.</i></a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/patient-journey/">Patient Journey</a>
+    <a href="/#support">How We Help</a>
+    <a href="https://calendar.app.google/5Seyf9bW8mxv6w5G7"
+       target="_blank" rel="noopener noreferrer">
+       Book a Meeting
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <p class="eyebrow">The people behind MolarBear</p>
+
+  <h1>
+    Meet the people<br>
+    behind <span>better care.</span>
+  </h1>
+
+  <p class="intro">
+    We're building a more human approach to dental care.
+    Meet the people working to make every conversation,
+    every follow-up and every patient journey matter.
+  </p>
+</section>
+
+<section class="philosophy">
+
+  <div>
+    <p class="eyebrow">What brings us together</p>
+    <h2>Care should never end when the appointment does.</h2>
+  </div>
+
+  <div>
+    <p>
+      At MolarBear, we believe that better dental care is about
+      more than appointments and treatment plans. It's about
+      people, trust and the conversations that happen in between.
+    </p>
+
+    <p>
+      We're bringing together people who care about making
+      healthcare experiences more thoughtful, connected
+      and personal.
+    </p>
+  </div>
+
+</section>
+
+<section class="team-section">
+
+  <div class="section-heading">
+    <p class="eyebrow">Our people</p>
+    <h2>The team making it happen.</h2>
+    <p>
+      Different perspectives, shared purpose.
+      Here's a little introduction to the people behind MolarBear.
+    </p>
+  </div>
+
+  <div class="team-grid">
+
+    <article class="member">
+      <div class="member-photo">
+        <span>01</span>
+      </div>
+      <h3>Team Member One</h3>
+      <p class="role">Co-founder</p>
+      <p class="bio">
+        Add a short introduction highlighting their background,
+        experience and role in building MolarBear.
+      </p>
+    </article>
+
+    <article class="member">
+      <div class="member-photo">
+        <span>02</span>
+      </div>
+      <h3>Team Member Two</h3>
+      <p class="role">Leadership</p>
+      <p class="bio">
+        Add a short introduction highlighting their background,
+        experience and contribution to the team.
+      </p>
+    </article>
+
+    <article class="member">
+      <div class="member-photo">
+        <span>03</span>
+      </div>
+      <h3>Team Member Three</h3>
+      <p class="role">Operations</p>
+      <p class="bio">
+        Add a short introduction about their experience
+        and the work they lead at MolarBear.
+      </p>
+    </article>
+
+    <article class="member">
+      <div class="member-photo">
+        <span>04</span>
+      </div>
+      <h3>Team Member Four</h3>
+      <p class="role">Patient Experience</p>
+      <p class="bio">
+        Add a short introduction about their experience
+        and commitment to patient care.
+      </p>
+    </article>
+
+    <article class="member">
+      <div class="member-photo">
+        <span>05</span>
+      </div>
+      <h3>Team Member Five</h3>
+      <p class="role">Technology & Innovation</p>
+      <p class="bio">
+        Add a short introduction about their expertise
+        and contribution to the MolarBear experience.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<section class="closing">
+  <p class="eyebrow">Our purpose</p>
+
+  <h2>Better care is built on better human connections.</h2>
+
+  <p>
+    We're here to help dental practices stay connected
+    with their patients, long after they leave the chair.
+  </p>
+
+  <a class="button" href="https://calendar.app.google/5Seyf9bW8mxv6w5G7"
+     target="_blank" rel="noopener noreferrer">
+     Let's connect ↗
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <span class="brand">molarbear<i>.</i></span>
+  <span>Powered by real intelligence.</span>
+  <span>A Santé Pixel Forest service</span>
+</footer>
+
+</div>
+
+</body>
+</html>
