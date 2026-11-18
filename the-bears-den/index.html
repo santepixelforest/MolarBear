@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bear's Den | MolarBear</title>
+  <meta name="description" content="Ideas worth chewing on. Explore oral health, dentistry, patient experiences and the future of dental care at The Bear's Den by MolarBear.">
+  <meta name="theme-color" content="#fafaf7">
+
+  <style>
+    :root {
+      --ink: #202021;
+      --paper: #fafaf7;
+      --purple: #6349e8;
+      --muted: #66666c;
+      --line: #d9d9d5;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      text-decoration: none;
+    }
+
+    .brand i {
+      color: var(--purple);
+      font-style: normal;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    nav a { text-decoration: none; }
+
+    nav a:hover, .article-link:hover {
+      color: var(--purple);
+    }
+
+    .hero {
+      padding: 95px 0 75px;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(52px, 8vw, 88px);
+      line-height: .98;
+      letter-spacing: -5px;
+      margin: 0 0 25px;
+    }
+
+    h1 span { color: var(--purple); }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 20px;
+      max-width: 650px;
+      margin: 0;
+    }
+
+    .featured {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 85px;
+      background: white;
+    }
+
+    .featured-visual {
+      background: #eeeafb;
+      min-height: 390px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 45px;
+      text-align: center;
+    }
+
+    .visual-text {
+      color: var(--purple);
+      font-size: clamp(35px, 5vw, 62px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -3px;
+    }
+
+    .featured-content {
+      padding: 48px 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tag {
+      color: var(--purple);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .featured h2 {
+      font-size: clamp(30px, 3.5vw, 43px);
+      line-height: 1.12;
+      letter-spacing: -1.7px;
+      margin: 18px 0;
+    }
+
+    .featured p {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0 0 25px;
+    }
+
+    .article-link {
+      color: var(--purple);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .section-heading {
+      border-top: 1px solid var(--line);
+      padding-top: 30px;
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-size: 36px;
+      letter-spacing: -1.5px;
+      margin: 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin: 8px 0 0;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0 65px;
+    }
+
+    .topic {
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 9px 17px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .closing {
+      background: #222225;
+      color: white;
+      border-radius: 18px;
+      padding: 48px;
+      margin: 30px 0 70px;
+    }
+
+    .closing .eyebrow { color: #e4f79a; }
+
+    .closing h2 {
+      font-size: 38px;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      max-width: 600px;
+      margin: 15px 0;
+    }
+
+    .closing p {
+      color: #ceced5;
+      max-width: 620px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 38px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media(max-width: 700px) {
+      .wrap { padding: 0 22px; }
+
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav { flex-wrap: wrap; gap: 15px; }
+
+      .hero { padding: 65px 0 50px; }
+
+      h1 {
+        font-size: 54px;
+        letter-spacing: -3px;
+      }
+
+      .hero p { font-size: 17px; }
+
+      .featured { grid-template-columns: 1fr; }
+
+      .featured-visual { min-height: 240px; }
+
+      .featured-content { padding: 30px 25px; }
+
+      .closing { padding: 30px 25px; }
+
+      .closing h2 { font-size: 32px; }
+
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header>
+    <a href="/" class="brand">molarbear<i>.</i></a>
+
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/patient-journey/">Patient Journey</a>
+      <a href="/team.html">Meet Our Team</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">The MolarBear Editorial</div>
+      <h1>The Bear's <span>Den.</span></h1>
+      <p>
+        Ideas worth chewing on. Exploring oral health, dentistry,
+        patient experiences and the systems shaping the future of care.
+      </p>
+    </section>
+
+    <section class="featured">
+      <div class="featured-visual">
+        <div class="visual-text">
+          Beyond<br>the teeth.<br>Beyond the<br>appointment.
+        </div>
+      </div>
+
+      <div class="featured-content">
+        <div class="tag">Featured article · Oral health & society</div>
+
+        <h2>Why Isn't Your Mouth Part of Your Body?</h2>
+
+        <p>
+          An exploration of the strange institutional boundary between
+          medicine and dentistry — and why the separation matters
+          more than we might think.
+        </p>
+
+        <a class="article-link"
+           href="/the-bears-den/why-isnt-your-mouth-part-of-your-body/">
+          Read the article →
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <h2>Explore the Den.</h2>
+        <p>Ideas, research and perspectives across the world of dental care.</p>
+      </div>
+
+      <div class="topics">
+        <span class="topic">Oral Health</span>
+        <span class="topic">Patient Experience</span>
+        <span class="topic">Dental Practice</span>
+        <span class="topic">Healthcare Systems</span>
+        <span class="topic">Technology & AI</span>
+        <span class="topic">Research & Perspectives</span>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="eyebrow">A different perspective</div>
+      <h2>There's more to dentistry than teeth.</h2>
+      <p>
+        The Bear's Den brings together the ideas, questions and
+        conversations that can help us think differently about
+        oral health and the future of care.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span class="brand">molarbear<i>.</i></span>
+    <span>The Bear's Den · Ideas worth chewing on.</span>
+    <span>A Santé Pixel Forest service</span>
+  </footer>
+
+</div>
+</body>
+</html>
